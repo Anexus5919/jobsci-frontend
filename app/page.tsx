@@ -1,3 +1,5 @@
+'use cleint';
+
 import Header from "./components/Header";
 import Dock from "./components/Dock";
 import Hero from "./components/Hero";

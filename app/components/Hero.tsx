@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import animationData from "@/public/animations/your-animation.json"; // Ensure the correct path
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Hero = () => (
   <main className="relative flex-1 flex flex-col justify-center px-24 bg-gradient-to-r from-white to-gray-100 dark:from-gray-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 overflow-hidden">
