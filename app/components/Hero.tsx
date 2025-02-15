@@ -9,13 +9,16 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Hero = () => (
   <main className="relative flex-1 flex flex-col justify-center px-24 
-    bg-gradient-to-br  from-blue-100 via-gray-50 to-teal-200 dark:from-gray-900 dark:via-gray-800 dark:to-teal-900 
+    bg-gradient-to-br from-blue-100 via-gray-50 to-teal-200 dark:from-gray-900 dark:via-gray-800 dark:to-teal-900 
     text-gray-900 dark:text-gray-100 overflow-hidden">
     
     {/* Animated Background Particles */}
     <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute top-32 left-10 w-56 h-56 bg-gradient-to-r from-blue-400 to-teal-300 opacity-30 rounded-full filter blur-3xl dark:opacity-15 animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-yellow-300 to-pink-400 opacity-25 rounded-full filter blur-3xl dark:opacity-10 animate-pulse"></div>
+      {/* Left-side pulse effect (Removed in dark mode) */}
+      <div className="absolute top-32 left-10 w-56 h-56 bg-gradient-to-r from-blue-400 to-teal-300 opacity-30 rounded-full filter blur-3xl dark:hidden animate-[pulse_3s_infinite]"></div>
+      
+      {/* Right-side pulse effect (Remains in both modes) */}
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-r from-yellow-300 to-pink-400 opacity-25 rounded-full filter blur-3xl dark:opacity-10 animate-[pulse_3s_infinite]"></div>
     </div>
 
     <div className="relative z-10 flex items-center justify-between">
