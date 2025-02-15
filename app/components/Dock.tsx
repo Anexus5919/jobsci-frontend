@@ -16,10 +16,13 @@ const Dock = () => {
   const [active, setActive] = useState("about");
 
   return (
-    <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 px-8 py-3 
-      bg-white/40 dark:bg-gray-900/50 backdrop-blur-md shadow-lg rounded-xl flex items-center 
-      space-x-8 border border-gray-300 dark:border-gray-700 z-50">
-      
+  <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 px-8 py-3 bg-white/40 dark:bg-gray-900/50 backdrop-blur-md shadow-lg rounded-xl flex items-center space-x-8 border border-gray-300 dark:border-gray-700 z-50">
+      {/* <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 px-8 py-3 
+      bg-white/40 dark:bg-gradient-to-r from-gray-950/70 to-gray-800/50 
+      dark:bg-opacity-60 backdrop-blur-md dark:backdrop-blur-xl shadow-lg 
+      rounded-xl flex items-center space-x-8 
+      border border-gray-300 dark:border-gray-700/80 
+      dark:shadow-[0_4px_20px_rgba(0,255,255,0.2)] z-50"> */}
       <nav className="flex space-x-8 relative" onMouseLeave={() => setActive("about")}>
         {menuItems.map((item, index) => {
           const isActive = active === item.name.toLowerCase();
